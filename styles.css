@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+header {
+    background: linear-gradient(135deg, #ff6f61, #ff9461);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.5em;
+    position: relative;
+}
+
+header .terug-knop {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+header .terug-knop:hover {
+    color: #ffd1c1;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+footer {
+    background: linear-gradient(135deg, #ff6f61, #ff9461);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.intro, .reservation {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.intro h2, .reservation h2 {
+    margin-bottom: 20px;
+    color: #ff6f61;
+}
+
+.reserveer-knop, button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.reserveer-knop:hover, button:hover {
+    background-color: #ff9461;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#kostenResultaat {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
