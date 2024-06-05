@@ -42,6 +42,7 @@ header .terug-knop:hover {
 main {
     flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -57,7 +58,7 @@ footer {
     bottom: 0;
 }
 
-.intro, .reservation {
+.intro, .outro, .reservation {
     background: white;
     padding: 30px;
     border-radius: 10px;
@@ -65,14 +66,15 @@ footer {
     text-align: center;
     max-width: 500px;
     width: 100%;
+    margin: 10px 0;
 }
 
-.intro h2, .reservation h2 {
+.intro h2, .outro h2, .reservation h2 {
     margin-bottom: 20px;
     color: #ff6f61;
 }
 
-.reserveer-knop, button {
+.reserveer-knop, button[type="submit"] {
     background-color: #ff6f61;
     color: white;
     padding: 10px 20px;
@@ -82,9 +84,11 @@ footer {
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.reserveer-knop:hover, button:hover {
+.reserveer-knop:hover, button[type="submit"]:hover {
     background-color: #ff9461;
 }
 
