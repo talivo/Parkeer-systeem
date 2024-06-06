@@ -65,7 +65,7 @@ if ($minutes > 0) {
 
 
                 <form action="../backend/kentekenController.php" method="POST">
-                    <input type="submit" class="parkeerForm" value="Betaal">
+                    <input type="submit" class="reserveer-knop" value="Betaal">
                     <input type="hidden" name="action" value="delete">
                 </form>
 

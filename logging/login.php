@@ -19,8 +19,7 @@
 
                     <div class="form-group">
                         <label for="kenteken">Kentekenplaat:</label>
-                        <input type="text" id="kenteken" name="kenteken" placeholder="XX-123-XX">
-                        <br><br>
+                        <input type="text" id="kenteken" name="kenteken" placeholder="XX-123-XX"><br><br>
                     </div>
                     <input type="submit" class="reserveer-knop" value="Verstuur melding">
                     <input type="hidden" name="action" value="create">

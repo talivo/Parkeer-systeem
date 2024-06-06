@@ -23,7 +23,7 @@ session_destroy();
                 <a href="logging/login.php" class="reserveer-knop">Reserveer nu uw parkeerplek</a>
             </section>
             <section class="outro">
-                <h2>Betaal uw blijf</h2>
+                <h2>Betaal uw tijd</h2>
                 <p>Heeft u al gelogd? Voer uw kenteken in om de sessie te beeindigen</p>
 
 
