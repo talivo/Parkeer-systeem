@@ -15,6 +15,6 @@ if($statement->rowCount() < 1) {
     die("Error: kenteken bestaat niet");
 }
 
-$_SESSION['kenteken'] = $user['kenteken'];
+$_SESSION['kenteken'] = $user['numberPlate'];
 
 header("Location: $base_url/logging/logout.php");

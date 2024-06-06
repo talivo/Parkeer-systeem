@@ -1,11 +1,10 @@
 <?php
-session_start();
-if(isset($_SESSION['kenteken'])) {
-    $kenteken = $_SESSION['kenteken'];
-    // Verder verwerken van de sessiegegevens
-} else {
-    echo "Geen sessie gevonden.";
-}
+    session_start();
+    if (!isset($_SESSION['kenteken'])) {
+        $msg = "Je moet eerst een kenteken invoeren om uit te klokken!";
+        header("Location: ../index.php?msg=$msg");
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
