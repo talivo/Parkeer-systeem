@@ -26,6 +26,9 @@ session_destroy();
                 <h2>Betaal uw blijf</h2>
                 <p>Heeft u al gelogd? Voer uw kenteken in om de sessie te beeindigen</p>
 
+
+
+                
                 <!-- STUURT DOOR NAAR SESSION CONTROLLER -->
                 <form action="backend/sessionController.php" method="POST">
                     <div class="form-group">
@@ -35,6 +38,9 @@ session_destroy();
                         <input type="submit" class="reserveer-knop" value="Eindig uw parkeersessie">
                     </div>
                 </form>
+
+
+
 
             </section>
         </main>

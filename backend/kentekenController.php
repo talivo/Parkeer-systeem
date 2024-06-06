@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $action = $_POST['action'];
 
@@ -16,25 +17,27 @@ if($action == "create")
     }
     
     require_once 'conn.php';
-    $query = "INSERT INTO numberPlates (numberPlate) VALUES (:kenteken)";
+    $query = "INSERT INTO numberPlates (numberPlate) VALUES (:numberPlate)";
     $statement = $conn->prepare($query);
     $statement->execute([
-        ':kenteken'=>$kenteken
+        ':numberPlate'=>$kenteken
     ]);
-    $numerPlates = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $user = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     header('Location: ../index.php?msg=Uw auto is toegevoegd');
     exit;
 }
 
 if($action == "delete"){
-    $id = $_POST['id'];
+    $kenteken = $_SESSION['kenteken'];
+
+    // Query
     require_once 'conn.php';
-    $query = "DELETE FROM berichten WHERE id = :id";
+    $query = "DELETE FROM numberPlates WHERE numberPlate = :numberPlate";
     $statement = $conn->prepare($query);
     $statement->execute([
-        ':id' => $id
+        ':numberPlate' => $kenteken
     ]);
 
-    header('Location:  ../index.php?msg=Melding verwijderd');
+    header('Location:  ../logging/thanks.php');
 }
