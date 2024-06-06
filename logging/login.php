@@ -19,7 +19,7 @@
 
                     <div class="form-group">
                         <label for="kenteken">Kentekenplaat:</label>
-                        <input type="text" id="kenteken" name="kenteken" placeholder="XX-123-XX"><br><br>
+                        <input type="text" id="kenteken" name="kenteken" placeholder="XX-123-XX" oninput="formatKenteken(this)">
                     </div>
                     <input type="submit" class="reserveer-knop" value="Verstuur melding">
                     <input type="hidden" name="action" value="create">
@@ -31,5 +31,23 @@
             <p>© 2024 Attractieparking</p>
         </footer>
     </div>
+
+    <script>
+        function formatKenteken(input) {
+            var kenteken = input.value.toUpperCase();
+            var formatted = kenteken.replace(/[^A-Z0-9]/g, ''); // Verwijder alle niet-alfanumerieke tekens
+            formatted = formatted.substring(0, 6); // Beperk tot maximaal 6 karakters
+            
+            // Voeg streepjes toe op de juiste posities
+            if (formatted.length > 2) {
+                formatted = formatted.substring(0, 2) + '-' + formatted.substring(2);
+            }
+            if (formatted.length > 5) {
+                formatted = formatted.substring(0, 5) + '-' + formatted.substring(5);
+            }
+            
+            input.value = formatted;
+        }
+    </script>
 </body>
 </html>
