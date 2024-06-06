@@ -15,6 +15,18 @@ if($action == "create")
         var_dump($errors);
         die();
     }
+
+    require_once 'conn.php';
+    
+    $query = "SELECT * FROM numberPlates WHERE numberPlate = :numberPlate"; 
+    $statement = $conn->prepare($query);
+    $statement->execute([
+        ":numberPlate" => $kenteken]);
+    
+    if ($statement->rowCount() > 0) {
+        die("Dit kenteken is al geregistreerd"); // Adjusted the message to reflect the context
+    }
+    
     
     require_once 'conn.php';
     $query = "INSERT INTO numberPlates (numberPlate) VALUES (:numberPlate)";
