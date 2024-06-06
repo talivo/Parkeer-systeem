@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(isset($_SESSION['kenteken'])) {
+    $kenteken = $_SESSION['kenteken'];
+    // Verder verwerken van de sessiegegevens
+} else {
+    echo "Geen sessie gevonden.";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>

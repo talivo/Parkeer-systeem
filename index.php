@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -18,8 +22,18 @@
             </section>
             <section class="outro">
                 <h2>Betaal uw blijf</h2>
-                <p>Heeft u al gelogd? Eindig hier uw parkeersessie</p>
-                <a href="logging/logout.php" class="reserveer-knop">Eindig uw parkeersessie</a>
+                <p>Heeft u al gelogd? Voer uw kenteken in om de sessie te beeindigen</p>
+
+                <!-- STUURT DOOR NAAR SESSION CONTROLLER -->
+                <form action="backend/sessionController.php" method="POST">
+                    <div class="form-group">
+                        <label for="kenteken">Kentekenplaat:</label>
+                        <input type="text" id="kenteken" name="kenteken" placeholder="XX-123-XX">
+                        <br><br>
+                        <input type="submit" class="reserveer-knop" value="Eindig uw parkeersessie">
+                    </div>
+                </form>
+
             </section>
         </main>
         <footer>
