@@ -21,7 +21,6 @@ if (!$user) {
     exit;
 }
 
-// Calculate time difference
 $loginTime = $user['loginTime'];
 $currentTime = date('Y-m-d H:i:s');
 
@@ -32,10 +31,9 @@ $interval = $loginTimeObj->diff($currentTimeObj);
 $hours = $interval->h + ($interval->days * 24);
 $minutes = $interval->i;
 
-// Calculate parking cost (for example, €1.25 per hour)
 $parkingCost = $hours * 125.25;
 if ($minutes > 0) {
-    $parkingCost += 125.25; // Assuming any minute over 0 adds another hour's cost
+    $parkingCost += 125.25;
 }
 
 ?>
@@ -55,7 +53,6 @@ if ($minutes > 0) {
         </header>
         <main>
             <section class="reservation">
-                <!-- toezicht van het totaal in kosten -->
 
                 <h1><?php echo htmlspecialchars($user['numberPlate']); ?></h1>
 

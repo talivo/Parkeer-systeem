@@ -39,10 +39,9 @@
     <script>
         function formatKenteken(input) {
             var kenteken = input.value.toUpperCase();
-            var formatted = kenteken.replace(/[^A-Z0-9]/g, ''); // Verwijder alle niet-alfanumerieke tekens
-            formatted = formatted.substring(0, 6); // Beperk tot maximaal 6 karakters
+            var formatted = kenteken.replace(/[^A-Z0-9]/g, '');
+            formatted = formatted.substring(0, 6); 
             
-            // Voeg streepjes toe op de juiste posities
             if (formatted.length > 2) {
                 formatted = formatted.substring(0, 2) + '-' + formatted.substring(2);
             }

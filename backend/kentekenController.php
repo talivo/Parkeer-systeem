@@ -24,7 +24,7 @@ if($action == "create")
         ":numberPlate" => $kenteken]);
     
     if ($statement->rowCount() > 0) {
-        die("Dit kenteken is al geregistreerd"); // Adjusted the message to reflect the context
+        die("Dit kenteken is al geregistreerd");
     }
     
     

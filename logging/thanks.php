@@ -13,7 +13,6 @@
         </header>
         <main>
             <section class="reservation">
-                <!-- toezicht van het totaal in kosten -->
                 <h2>Bedankt voor uw keuze in ons</h2>
                 <h1>Fijne reis</h1>
             </section>
